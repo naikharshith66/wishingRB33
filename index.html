@@ -331,7 +331,7 @@ p{font-size:clamp(.88rem,2.5vw,1.05rem);color:rgba(255,255,255,.72);
   width:280px;
   height:420px;
 
-  background:url("images/note/note1.jpeg") center/cover no-repeat;
+  background:url("birth/images/note/note1.jpeg") center/cover no-repeat;
 
   display:flex;
   align-items:center;
@@ -977,15 +977,14 @@ function buildMems(){
     const el=document.createElement('div');
     el.className='cicon';
     
-    // random position
     el.style.left = Math.random()*80 + "%";
     el.style.top = Math.random()*70 + "%";
     el.style.fontSize = (2 + Math.random()*1.5) + "rem";
 
     el.innerHTML = `<img src="${c.img}" class="cat-img">`;
-    // 👉 CLICK INTERACTION
+    
     el.onclick = ()=>{
-      // jump animation
+    
       el.style.transform = "scale(1.5) translateY(-20px)";
       setTimeout(()=>{
         el.style.transform = "";
@@ -1101,7 +1100,7 @@ function initSurp(){
 function openGift(){
   const em=document.getElementById('giftEm');
   em.innerHTML = `
-  <img src="images/surprise/cute.gif" class="gift-img">
+  <img src="birth/images/surprise/cute.gif" class="gift-img">
 `;
   em.classList.add('burst');
   document.getElementById('openBtn').style.display='none';
